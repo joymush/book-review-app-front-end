@@ -13,7 +13,7 @@ function Login({onLogin}) {
   // perform side effect for user login
   const handleSubmit = e => {
     e.preventDefault();
-    fetch("/users", {
+    fetch("http://localhost:3000/users/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

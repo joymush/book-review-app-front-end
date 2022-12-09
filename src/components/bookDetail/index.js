@@ -36,15 +36,15 @@ export default function BookDetail() {
     // eslint-disable-next-line no-unused-vars
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        // use fetch to post data once endpoint is available
+        // // use fetch to post data once endpoint is available
 
-        // fetch("/:id/reviews", {
-        //     method: "POST",
-        //     headers: {
+        // // fetch("/:id/reviews", {
+        // //     method: "POST",
+        // //     headers: {
         //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify(data),
-        // })
+        // //     },
+        // //     body: JSON.stringify(data),
+        // // })
        
 
 

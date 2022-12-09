@@ -7,7 +7,7 @@ export default function BookList() {
   const navigate = useNavigate()
   const [books, setBooks] = useState([]);
   useEffect(() => {
-    fetch('/books')
+    fetch('http://localhost:3000/books/')
       .then(r => r.json())
       .then(books => {
         console.log(books)
