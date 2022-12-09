@@ -6,6 +6,25 @@ import { useForm } from "react-hook-form";
 
 import { useLocation } from 'react-router-dom'
 
+ // eslint-disable-next-line no-unused-vars
+ const product = {
+    name: 'Everyday Ruck Snack',
+    href: '#',
+    price: '$220',
+    description:
+        "Don't compromise on snack-carrying capacity with this lightweight and spacious bag. The drawstring top keeps all your favorite chips, crisps, fries, biscuits, crackers, and cookies secure.",
+    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-featured-product-shot.jpg',
+    imageAlt: 'Model wearing light green backpack with black canvas straps and front zipper pouch.',
+    breadcrumbs: [
+        { id: 1, name: 'Travel', href: '#' },
+        { id: 2, name: 'Bags', href: '#' },
+    ],
+    sizes: [
+        { name: '18L', description: 'Perfect for a reasonable amount of snacks.' },
+        { name: '20L', description: 'Enough room for a serious amount of snacks.' },
+    ],
+}
+
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
@@ -14,7 +33,8 @@ export default function BookDetail() {
     const location = useLocation()
     const { book } = location.state
 
-    const { register, handleSubmit }= useForm();
+    // eslint-disable-next-line no-unused-vars
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         // use fetch to post data once endpoint is available
 
@@ -78,8 +98,6 @@ export default function BookDetail() {
 
                                         </div>)
                                 }
-
-
                             </div>
                         </div>
 
